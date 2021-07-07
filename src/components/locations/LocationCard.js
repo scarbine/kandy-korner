@@ -3,8 +3,9 @@ import './Locations.css'
 
 export const LocationCard = () => {
 	return(
-		<>
-		<h1>Location</h1>
-		</>
+		<section className="location">
+			<h3 className="location__name">Nashville</h3>
+			<div className="location_area">North</div>
+	    	</section>
 	)
 }

@@ -7,6 +7,8 @@ export const LocationsList = () => {
 		<>
 		<h1>Locations List</h1>
 		<LocationCard />
+		<LocationCard />
+		<LocationCard />
 		</>
 	)
 }
