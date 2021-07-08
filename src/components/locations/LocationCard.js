@@ -1,11 +1,13 @@
-import React from 'react'
-import './Locations.css'
+import React from "react";
+import "./Location.css";
 
-export const LocationCard = () => {
-	return(
-		<section className="location">
-			<h3 className="location__name">Nashville</h3>
-			<div className="location_area">North</div>
-	    	</section>
-	)
-}
+export const LocationCard = ({location}) => {
+  return (
+    <section className="location">
+      <h3 className="location__name">{location.name}</h3>
+      <div className="location__address">{location.address}</div>
+      <div className="location__address">Total Sq. Ft: {location.Squarefootage}</div>
+      <div className="location__address">{location.isHandicap}</div>
+    </section>
+  );
+};

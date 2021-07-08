@@ -1,7 +1,10 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import { Home } from "./Home";
-import { LocationCard } from "./locations/LocationCard";
+import { LocationList } from "./locations/LocationList";
+import { LocationProvider } from "./locations/LocationProvider";
+import { ProductProvider } from "./products/ProductProvider";
+import { ProductList } from "./products/ProductList";
 
 export const ApplicationViews = () => {
   return (
@@ -11,12 +14,17 @@ export const ApplicationViews = () => {
         <Home />
       </Route>
 
-      {/*Render the animal list when http://localhost:3000/locations */}
-      <Route path="/locations">
-        <LocationCard />
-      </Route>
+      <LocationProvider>
+        <Route path="/locations">
+          <LocationList />
+        </Route>
+      </LocationProvider>
 
-    
+      <ProductProvider>
+        <Route path="/products">
+          <ProductList />
+        </Route>
+      </ProductProvider>
     </>
   );
 };

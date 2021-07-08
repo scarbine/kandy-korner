@@ -8,7 +8,7 @@ export const LocationProvider = (props) => {
   const [locations, setLocations] = useState([]);
 
   const getLocations = () => {
-    return fetch("http://localhost:8088/locations?_expand=location")
+    return fetch("http://localhost:8088/locations")
       .then((res) => res.json())
       .then(setLocations);
   };
@@ -23,12 +23,7 @@ export const LocationProvider = (props) => {
     }).then(getLocations);
   };
 
-  /*
-        You return a context provider which has the
-        `animals` state, `getAnimals` function,
-        and the `addAnimal` function as keys. This
-        allows any child elements to access them.
-    */
+ 
   return (
     <LocationContext.Provider
       value={{

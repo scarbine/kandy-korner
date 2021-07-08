@@ -1,20 +1,26 @@
-import React from 'react'
-import { LocationCard } from './locations/LocationCard'
-import './Home.css'
+import React from "react";
+import { LocationProvider } from "./locations/LocationProvider";
+import { LocationList } from "./locations/LocationList";
+import { ProductProvider } from "./products/ProductProvider";
+import { ProductList } from "./products/ProductList";
+import "./Home.css";
 
 export const Home = () => {
-	return(
-		<>
-		<section className="locations_card">
-		<h2>Kandy Korner</h2>
+  return (
+    <>
+      <section className="locations_card">
+        <h2>Kandy Korner</h2>
 
-		<h3> Locations</h3>
-		<article className="locations">
-			<LocationCard />
-			<LocationCard />
-			<LocationCard />
-		</article>
-		</section>
-		</>
-	)
-}
+        <h3> Locations</h3>
+        <LocationProvider>
+          <LocationList />
+        </LocationProvider>
+
+        <h3> Products</h3>
+        <ProductProvider>
+          <ProductList />
+        </ProductProvider>
+      </section>
+    </>
+  );
+};
