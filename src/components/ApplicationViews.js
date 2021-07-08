@@ -1,31 +1,22 @@
-import React from 'react'
-import {Route} from "react-router-dom"
-
+import React from "react";
+import { Route } from "react-router-dom";
+import { Home } from "./Home";
+import { LocationCard } from "./locations/LocationCard";
 
 export const ApplicationViews = () => {
-	return(
-		<>
+  return (
+    <>
       {/* Render the location list when http://localhost:3000/ */}
       <Route exact path="/">
-      <h1>Application Views</h1>
+        <Home />
       </Route>
 
-      {/* Render the animal list when http://localhost:3000/animals */}
-      {/* <Route path="/animal">
-        <AnimalCard />
-      </Route>
-
-      <Route path="/customer">
-        <CustomerCard />
-      </Route>
-
-      <Route path="/employee">
-        <EmployeeCard />
-      </Route>
-
-      <Route path="/location">
+      {/*Render the animal list when http://localhost:3000/locations */}
+      <Route path="/locations">
         <LocationCard />
-      </Route> */}
+      </Route>
+
+    
     </>
-	)
-}
+  );
+};

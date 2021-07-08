@@ -1,0 +1,15 @@
+.locations {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+      }
+      
+      .location {
+	flex-basis: 28%;
+	margin: 1em;
+	padding: 1em;
+	border: solid 0.15rem grey;
+	background-color: rgba(34, 34, 34, 0.529);
+	border-radius: 1rem;
+	color: whitesmoke;
+      }
