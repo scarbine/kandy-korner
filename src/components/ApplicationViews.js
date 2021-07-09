@@ -21,13 +21,13 @@ export const ApplicationViews = () => {
         </Route>
       </LocationProvider>
 
-      <ProductTypeProvider>
         <ProductProvider>
+      <ProductTypeProvider>
           <Route path="/products">
             <ProductList />
           </Route>
-        </ProductProvider>
       </ProductTypeProvider>
+        </ProductProvider>
     </>
   );
 };

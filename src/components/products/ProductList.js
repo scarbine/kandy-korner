@@ -14,7 +14,7 @@ export const ProductList = () => {
 
   //useEffect - reach out to the world for something
   useEffect(() => {
-    console.log("ProductList: useEffect - getProducts")
+    
     getProductTypes()
     .then(getProducts)
 
@@ -26,7 +26,7 @@ export const ProductList = () => {
       {console.log("ProductList: Render", products, productTypes)}
       {
         products.map(product => {
-          const productType = productTypes.find(pt => pt.id === product.productTypes.id)
+          const productType = productTypes.find(pt => pt.id === product.productTypesId)
           return <ProductCard key={product.id} product={product} productType={productType} />
         })
       }
