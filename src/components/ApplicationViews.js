@@ -5,6 +5,7 @@ import { LocationList } from "./locations/LocationList";
 import { LocationProvider } from "./locations/LocationProvider";
 import { ProductProvider } from "./products/ProductProvider";
 import { ProductList } from "./products/ProductList";
+import { ProductTypeProvider } from "./productTypes/ProductTypeProvider";
 
 export const ApplicationViews = () => {
   return (
@@ -20,11 +21,13 @@ export const ApplicationViews = () => {
         </Route>
       </LocationProvider>
 
-      <ProductProvider>
-        <Route path="/products">
-          <ProductList />
-        </Route>
-      </ProductProvider>
+      <ProductTypeProvider>
+        <ProductProvider>
+          <Route path="/products">
+            <ProductList />
+          </Route>
+        </ProductProvider>
+      </ProductTypeProvider>
     </>
   );
 };

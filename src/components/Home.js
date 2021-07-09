@@ -8,7 +8,7 @@ import "./Home.css";
 export const Home = () => {
   return (
     <>
-      <section className="locations_card">
+      
         <h2>Kandy Korner</h2>
 
         <h3> Locations</h3>
@@ -20,7 +20,7 @@ export const Home = () => {
         <ProductProvider>
           <ProductList />
         </ProductProvider>
-      </section>
+     
     </>
   );
 };
