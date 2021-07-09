@@ -3,24 +3,25 @@ import { LocationProvider } from "./locations/LocationProvider";
 import { LocationList } from "./locations/LocationList";
 import { ProductProvider } from "./products/ProductProvider";
 import { ProductList } from "./products/ProductList";
+import { ProductTypeProvider } from "./productTypes/ProductTypeProvider";
 import "./Home.css";
 
 export const Home = () => {
   return (
     <>
-      
-        <h2>Kandy Korner</h2>
+      <h2>Kandy Korner</h2>
 
-        <h3> Locations</h3>
-        <LocationProvider>
-          <LocationList />
-        </LocationProvider>
+      <h3> Locations</h3>
+      <LocationProvider>
+        <LocationList />
+      </LocationProvider>
 
-        <h3> Products</h3>
+      <h3> Products</h3>
+      <ProductTypeProvider>
         <ProductProvider>
           <ProductList />
         </ProductProvider>
-     
+      </ProductTypeProvider>
     </>
   );
 };
