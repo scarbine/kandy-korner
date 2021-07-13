@@ -5,6 +5,8 @@ import { ProductProvider } from "./products/ProductProvider";
 import { ProductList } from "./products/ProductList";
 import { ProductTypeProvider } from "./productTypes/ProductTypeProvider";
 import "./Home.css";
+import { EmployeeProvider } from "./employees/EmployeeProvider";
+import { EmployeeList } from "./employees/EmployeeList";
 
 export const Home = () => {
   return (
@@ -22,6 +24,11 @@ export const Home = () => {
           <ProductList />
         </ProductProvider>
       </ProductTypeProvider>
+
+      <h3>Employees</h3>
+      <EmployeeProvider>
+        <EmployeeList />
+      </EmployeeProvider>
     </>
   );
 };
